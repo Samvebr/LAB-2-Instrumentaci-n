@@ -1,1 +1,1 @@
-# LAB-2-Instrumentaci-n
+# LAB-2-Instrumentación
