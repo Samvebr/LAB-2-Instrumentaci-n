@@ -32,18 +32,30 @@ Diseñar, construir y validar un sistema vestible capaz de estimar cuantitativam
 # Materiales  y procedimiento 
 
 ## Materiales: 
--Generador de señales biológicas
--Osciloscopio digital
--Fuente de voltaje DC
--Computador con acceso a Internet
--MATLAB
--Arduino UNO o Arduino Nano
--Regleta de Proto-Board
--Cables UTP
--Resistencia de 68 kΩ
--Condensador de 1 µF
--2 Electrodos Ag-AgCl o placas metálicas inertes
--Cintas de velcro
+- Generador de señales biológicas
+
+- Osciloscopio digital
+
+- Fuente de voltaje DC
+
+- Computador con acceso a Internet
+
+- MATLAB
+
+- Arduino UNO o Arduino Nano
+
+- Regleta de Proto-Board
+
+- Cables UTP
+
+- Resistencia de 68 kΩ
+
+- Condensador de 1 µF
+
+- 2 Electrodos Ag-AgCl o placas metálicas inertes
+
+- Cintas de velcro
+
 ## Procedimiento: 
 
 
