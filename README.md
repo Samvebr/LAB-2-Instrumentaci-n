@@ -58,7 +58,23 @@ Diseñar, construir y validar un sistema vestible capaz de estimar cuantitativam
 
 ## Procedimiento: 
 
+- Parte A
+  
+En la primera etapa de la práctica se realiza una revisión de la literatura científica relacionada con la actividad electrodérmica (EDA) y la respuesta galvánica cutánea (GSR), con el fin de comprender los fundamentos fisiológicos y eléctricos que permiten utilizar esta señal como indicador de activación del sistema nervioso autónomo. Paralelamente, se investigan los efectos fisiológicos de las corrientes eléctricas directas y alternas sobre el cuerpo humano, tomando como referencia los lineamientos establecidos por la International Electrotechnical Commission en la norma IEC 60479.
 
+Posteriormente, se realizan los cálculos necesarios para garantizar la seguridad del usuario. Para ello se considera un rango de alimentación entre 3.3 V y 5 V y se analiza el caso extremo en el que la resistencia de la piel es equivalente a un cortocircuito (R_skin = 0 Ω). A partir de estas condiciones se dimensionan los componentes del circuito, especialmente la resistencia limitadora, de forma que la corriente máxima que atraviese la piel sea inferior a 1 mA. Finalmente, con base en estos cálculos se diseña el circuito del dispositivo vestible encargado de capturar las variaciones de la GSR y transmitirlas de manera alámbrica a un computador. En esta etapa también se define la región anatómica donde se ubicarán los electrodos, procurando seleccionar zonas con alta densidad de glándulas sudoríparas y mínima interferencia por movimiento, como los dedos de la mano.
+
+- Parte B
+  
+En la segunda etapa se procede a la construcción física del sistema diseñado, utilizando una plataforma de prototipado electrónico y un microcontrolador para la adquisición de la señal. Una vez ensamblado el circuito y conectados los electrodos al sujeto de prueba, se realiza la captura de la señal GSR en tiempo real y se visualiza su comportamiento mediante el computador. Durante esta fase se evalúa la estabilidad del sistema frente a diferentes condiciones de movimiento del sujeto, como caminar, escribir o mover las manos, con el objetivo de identificar posibles fuentes de ruido o interferencia.
+
+Posteriormente se realiza una prueba fisiológica controlada en la que el sujeto permanece sentado y en reposo. En este estado se le solicita realizar una inspiración profunda seguida de una exhalación lenta. Durante este proceso se registra la variación de la conductancia cutánea, la cual normalmente presenta un incremento notable seguido de un retorno gradual al nivel basal. Con base en los valores máximo y mínimo obtenidos durante estas mediciones se establecen umbrales que permitan clasificar el nivel de estrés percibido en categorías como bajo, moderado o elevado. Finalmente, se realizan las modificaciones necesarias en el sistema para permitir la transmisión inalámbrica de la información hacia un computador o dispositivo móvil, de manera que el sistema pueda emitir alertas o mensajes indicando el nivel estimado de estrés del usuario.
+
+- Parte C
+  
+En la etapa final de la práctica se utiliza el dispositivo desarrollado para monitorear el nivel de estrés de un sujeto mientras realiza actividades que requieren concentración y esfuerzo mental. Para ello, el sujeto de prueba utiliza el dispositivo vestible mientras resuelve un conjunto breve de problemas o un examen corto. Durante la realización de esta tarea se registran continuamente las variaciones de la señal GSR y el sistema procesa la información para determinar el nivel de estrés estimado en tiempo real.
+
+Los resultados obtenidos se analizan observando la relación entre el incremento de la actividad cognitiva y los cambios en la conductancia cutánea. Finalmente, se documenta todo el procedimiento experimental, incluyendo el diseño del sistema, los cálculos realizados, la construcción del dispositivo, las pruebas realizadas y los resultados obtenidos. Esta información se organiza en un repositorio en GitHub que incluya el código, las gráficas de la señal adquirida, el análisis de resultados y las conclusiones de la práctica.
 
 ## Marco teórico: 
 
