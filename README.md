@@ -283,3 +283,4 @@ No es una herramienta diagnóstica clínica por sí sola.
 - Cacioppo, J. T., Tassinary, L. G., & Berntson, G. G. (2017). Handbook of psychophysiology (4th ed.). Cambridge University Press.
 
 - Critchley, H. D. (2002). Electrodermal responses: What happens in the brain. The Neuroscientist, 8(2), 132–142. https://doi.org/10.1177/107385840200800209
+  
