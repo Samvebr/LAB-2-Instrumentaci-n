@@ -1,5 +1,8 @@
 # LAB-2-Instrumentación | Monitoreo del Nivel de Estrés Mediante Respuesta Galvánica Cutánea (GSR)
 
+- Daniel Espinosa
+- Samuel Velandia
+  
 ## Introducción: 
 
 La actividad electrodérmica (EDA, Electrodermal Activity) comprende los fenómenos eléctricos que ocurren en la piel relacionados con la variación de su conductancia. Esta propiedad cambia principalmente debido a la actividad del sistema nervioso simpático, el cual regula la sudoración. Cuando una persona experimenta estrés, emoción o esfuerzo cognitivo, aumenta la actividad de las glándulas sudoríparas, generando un incremento en la conductancia cutánea.
