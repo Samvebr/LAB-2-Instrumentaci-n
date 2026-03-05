@@ -1,7 +1,7 @@
 # LAB-2-Instrumentación | Monitoreo del Nivel de Estrés Mediante Respuesta Galvánica Cutánea (GSR)
 
-- Daniel Espinosa
-- Samuel Velandia
+- Daniel Espinosa 5600778
+- Samuel Velandia 5600777
   
 ## Introducción: 
 
