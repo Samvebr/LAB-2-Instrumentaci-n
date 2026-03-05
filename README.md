@@ -107,3 +107,160 @@ Desde un enfoque psicofisiológico, la GSR es considerada un biomarcador indirec
 Finalmente, desde la perspectiva de la instrumentación biomédica, la medición de GSR implica la integración de principios de fisiología, bioelectricidad, electrónica analógica y procesamiento digital de señales. La correcta selección de electrodos, el control de impedancia de contacto, la limitación de corriente y el diseño de filtros determinan la calidad y confiabilidad de la señal obtenida. En consecuencia, el análisis de la respuesta galvánica cutánea constituye un ejercicio interdisciplinario que articula fundamentos biológicos con criterios de diseño electrónico seguro y robusto.
 
 <img width="372" height="241" alt="image" src="https://github.com/user-attachments/assets/d415b7ff-74b3-49b8-a126-d439f5f3faa6" />
+
+## Código de MATLAB 
+
+```bash 
+clc;
+clear;
+close all;
+
+
+Fs = 100;   % Frecuencia de muestreo [Hz]
+
+answer = inputdlg("Ingrese el tiempo de adquisición (s):", ...
+                  "Tiempo de adquisición", 1, {"30"});
+if isempty(answer)
+    error("Adquisición cancelada");
+end
+
+T = str2double(answer{1});
+if isnan(T) || T <= 0
+    error("Tiempo inválido");
+end
+
+N = Fs * T;
+
+
+% ===== FILTRO GSR PASA-BAJO 1 Hz =====
+f_cut = 1;   % Hz
+[b,a] = butter(2, f_cut/(Fs/2), 'low');
+zf = zeros(max(length(a),length(b))-1,1);
+% ======================================
+
+
+puerto = "COM3";
+baud   = 115200;
+
+s = serialport(puerto, baud);
+configureTerminator(s,"LF");
+flush(s);
+pause(2);
+
+disp("Iniciando adquisición...");
+
+resp_raw = zeros(N,1);
+resp_f   = zeros(N,1);
+t        = (0:N-1)/Fs;
+
+k = 1;
+
+
+figure;
+
+h1 = animatedline('Color','r','LineWidth',0.8);
+h2 = animatedline('Color','b','LineWidth',1.5);
+
+xlabel("Tiempo [s]");
+ylabel("Señal GSR [V]");
+title("Señal GSR cruda y filtrada (Lowpass 1 Hz)");
+legend("Cruda","Filtrada (1 Hz)");
+grid on;
+xlim([0 T]);
+
+
+while k <= N
+
+    linea = readline(s);              
+    linea = strtrim(linea);           
+
+    nums = regexp(linea, '[-+]?\d*\.?\d+', 'match');
+
+    if isempty(nums)
+        continue                      
+    end
+
+    y = str2double(nums{1});
+
+    if isnan(y)
+        continue
+    end
+
+    resp_raw(k) = y;
+
+    [yf, zf] = filter(b, a, y, zf);
+    resp_f(k) = yf;
+
+    % ===== IGNORAR VOLTAJES MAYORES A 1V EN LA GRÁFICA =====
+    if abs(y) <= 1
+        addpoints(h1, t(k), y);
+    end
+
+    if abs(yf) <= 1
+        addpoints(h2, t(k), yf);
+    end
+    % ========================================================
+
+    if mod(k,5) == 0
+        drawnow limitrate
+    end
+
+    k = k + 1;
+end
+
+disp("Adquisición finalizada.");
+clear s
+
+
+filename = sprintf("senal_GSR_filtrada_%ds.mat", round(T));
+save(filename, "t", "resp_raw", "resp_f", "Fs");
+
+disp("Archivo guardado:");
+disp(filename);
+```
+
+Con este código de MATLAB pudimos adquirir, filtrar, visualizar y guardar una señal de respuesta galvánica cutánea (GSR) proveniente de un microcontrolador (por ejemplo un Arduino) a través del puerto serial. Al inicio se limpian las variables, la consola y las figuras abiertas (clc, clear, close all). Luego se define la frecuencia de muestreo en 100 Hz y se le pide al usuario ingresar el tiempo de adquisición mediante una ventana de diálogo. Con estos valores se calcula el número total de muestras que se deben capturar (N = Fs*T). Después se diseña un filtro digital Butterworth pasa-bajo de segundo orden con frecuencia de corte de 1 Hz, adecuado para señales GSR porque estas varían lentamente y su contenido espectral está por debajo de esa frecuencia. También se inicializan variables para almacenar la señal cruda, la señal filtrada y el vector de tiempo.
+
+Posteriormente el programa configura la comunicación serial con el dispositivo externo (por ejemplo un Arduino) usando el puerto COM3 y una velocidad de 115200 baudios. Dentro de un ciclo while, el script lee continuamente las líneas que llegan por el puerto serial, extrae el número contenido en cada línea y lo convierte a valor numérico. Cada muestra se almacena como señal cruda y luego se procesa con el filtro digital para obtener la señal filtrada. Ambas señales se van graficando en tiempo real utilizando animatedline, donde la roja representa la señal original y la azul la señal filtrada. Para evitar saturaciones o errores de visualización, el código ignora valores de voltaje mayores a ±1 V al momento de graficar. Finalmente, cuando se completan todas las muestras, el programa cierra la comunicación serial y guarda los datos adquiridos (tiempo, señal cruda, señal filtrada y frecuencia de muestreo) en un archivo .mat para su posterior análisis.
+
+## Gráficas
+
+## Analísis
+
+## Concludiones 
+
+## Preguntas a discutir
+ 
+ 
+
+ - 1. ¿A qué se debe que una inspiración profunda incremente la magnitud de la respuesta galvánica cutánea (GSR)?
+
+Una inspiración profunda genera activación transitoria del sistema nervioso autónomo, particularmente del sistema simpático. Este aumento simpático estimula las glándulas sudoríparas ecrinas, incrementando la secreción de sudor y reduciendo la resistencia cutánea. Como consecuencia, aumenta la conductancia de la piel (SCL) y se produce una respuesta transitoria (SCR). Posteriormente, el sistema retorna gradualmente a su estado basal debido a mecanismos de regulación homeostática.
+
+ - 2. ¿Cuáles serían las ventajas y desventajas de utilizar la GSR como indicador de estrés?
+  
+       - Ventajas
+
+Método no invasivo.
+
+Fácil implementación electrónica.
+
+Alta sensibilidad a cambios autonómicos.
+
+Bajo costo.
+
+Respuesta rápida ante estímulos emocionales o cognitivos.
+
+  - Desventajas
+
+No discrimina tipo de emoción (miedo, ansiedad, excitación).
+
+Sensible a temperatura ambiental y movimiento.
+
+Alta variabilidad interindividual.
+
+Puede verse afectada por sudoración térmica no relacionada con estrés.
+
+No es una herramienta diagnóstica clínica por sí sola.
+
+## Referencias 
