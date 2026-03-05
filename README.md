@@ -79,6 +79,13 @@ En la etapa final de la práctica se utiliza el dispositivo desarrollado para mo
 
 Los resultados obtenidos se analizan observando la relación entre el incremento de la actividad cognitiva y los cambios en la conductancia cutánea. Finalmente, se documenta todo el procedimiento experimental, incluyendo el diseño del sistema, los cálculos realizados, la construcción del dispositivo, las pruebas realizadas y los resultados obtenidos. Esta información se organiza en un repositorio en GitHub que incluya el código, las gráficas de la señal adquirida, el análisis de resultados y las conclusiones de la práctica.
 
+## Justifiación Biológica: 
+
+La colocación de un sensor de respuesta galvánica de la piel (SGR) en las palmas de los dedos se justifica biológicamente porque esta zona posee una de las mayores densidades de glándulas sudoríparas ecrinas del cuerpo humano, las cuales están directamente inervadas por el sistema nervioso simpático. A diferencia de otras regiones cutáneas, las palmas presentan una alta actividad sudomotora incluso ante estímulos emocionales o cognitivos leves, lo que genera variaciones detectables en la conductancia eléctrica de la piel. Estas variaciones se producen porque el sudor, al contener electrolitos, modifica la resistencia eléctrica superficial cuando aumenta la activación autonómica. Por ello, al ubicar el SGR en los dedos se obtiene una señal más sensible, rápida y confiable de los cambios fisiológicos asociados al estrés, la atención o la respuesta emocional, lo que convierte a esta región en un sitio anatómicamente óptimo para la medición.
+
+<img width="690" height="431" alt="image" src="https://github.com/user-attachments/assets/aeca7b4a-03e8-490c-acc7-86835d27b24e" />
+
+
 ## Marco teórico: 
 
 La actividad electrodérmica (EDA, Electrodermal Activity) constituye una manifestación periférica directa de la activación del sistema nervioso autónomo, específicamente de su rama simpática. Desde finales del siglo XIX, estudios pioneros como los de Charles Féré y posteriormente Ivan Pavlov evidenciaron que los estados emocionales y los estímulos sensoriales generan modificaciones medibles en la conductancia eléctrica de la piel. Estas variaciones se deben principalmente a cambios en la actividad de las glándulas sudoríparas ecrinas, las cuales están densamente distribuidas en regiones como los dedos y la palma de la mano.
