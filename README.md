@@ -23,11 +23,30 @@ Diseñar, construir y validar un sistema vestible capaz de estimar cuantitativam
 
 ## Objetivos Especificos
 
--Identificar y diferenciar las componentes estacionaria (SCL) y transitoria (SCR) de la señal de respuesta galvánica cutánea.
+- Identificar y diferenciar las componentes estacionaria (SCL) y transitoria (SCR) de la señal de respuesta galvánica cutánea.
 
--Diseñar un sistema electrónico seguro que garantice que la corriente que atraviesa la piel del usuario sea menor a 1 mA bajo condiciones extremas.
+- Diseñar un sistema electrónico seguro que garantice que la corriente que atraviesa la piel del usuario sea menor a 1 mA bajo condiciones extremas.
 
--Implementar un sistema de adquisición, visualización y transmisión inalámbrica que permita clasificar el nivel de estrés durante la ejecución de tareas cognitivas.
+- Implementar un sistema de adquisición, visualización y transmisión inalámbrica que permita clasificar el nivel de estrés durante la ejecución de tareas cognitivas.
+
+# Materiales  y procedimiento 
+
+## Materiales: 
+-Generador de señales biológicas
+-Osciloscopio digital
+-Fuente de voltaje DC
+-Computador con acceso a Internet
+-MATLAB
+-Arduino UNO o Arduino Nano
+-Regleta de Proto-Board
+-Cables UTP
+-Resistencia de 68 kΩ
+-Condensador de 1 µF
+-2 Electrodos Ag-AgCl o placas metálicas inertes
+-Cintas de velcro
+## Procedimiento: 
+
+
 
 ## Marco teórico: 
 
@@ -48,3 +67,5 @@ En términos de procesamiento de señal, la GSR es una señal lenta, con conteni
 Desde un enfoque psicofisiológico, la GSR es considerada un biomarcador indirecto de estrés y carga cognitiva. El estrés activa el eje hipotálamo–hipófisis–adrenal y simultáneamente incrementa la actividad simpática, produciendo respuestas sudomotoras detectables en la piel. Sin embargo, es fundamental reconocer que la GSR no discrimina entre tipos de emoción (miedo, ansiedad, sorpresa o excitación), sino que refleja únicamente el nivel de activación autonómica. Por tanto, su interpretación debe contextualizarse dentro del entorno experimental y, de ser posible, complementarse con otros indicadores fisiológicos como frecuencia cardíaca o variabilidad de la frecuencia cardíaca.
 
 Finalmente, desde la perspectiva de la instrumentación biomédica, la medición de GSR implica la integración de principios de fisiología, bioelectricidad, electrónica analógica y procesamiento digital de señales. La correcta selección de electrodos, el control de impedancia de contacto, la limitación de corriente y el diseño de filtros determinan la calidad y confiabilidad de la señal obtenida. En consecuencia, el análisis de la respuesta galvánica cutánea constituye un ejercicio interdisciplinario que articula fundamentos biológicos con criterios de diseño electrónico seguro y robusto.
+
+<img width="372" height="241" alt="image" src="https://github.com/user-attachments/assets/d415b7ff-74b3-49b8-a126-d439f5f3faa6" />
