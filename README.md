@@ -227,7 +227,7 @@ Posteriormente el programa configura la comunicación serial con el dispositivo 
 
 ## Analísis
 
-## Concludiones 
+## Conclusiones 
 
 ## Preguntas a discutir
  
@@ -239,7 +239,7 @@ Una inspiración profunda genera activación transitoria del sistema nervioso au
 
  - 2. ¿Cuáles serían las ventajas y desventajas de utilizar la GSR como indicador de estrés?
   
-       - Ventajas
+  - Ventajas
 
 Método no invasivo.
 
@@ -264,3 +264,18 @@ Puede verse afectada por sudoración térmica no relacionada con estrés.
 No es una herramienta diagnóstica clínica por sí sola.
 
 ## Referencias 
+
+
+- Boucsein, W. (2012). Electrodermal activity (2nd ed.). Springer. https://doi.org/10.1007/978-1-4614-1126-0
+
+- Dawson, M. E., Schell, A. M., & Filion, D. L. (2017). The electrodermal system. En J. T. Cacioppo, L. G. Tassinary, & G. G. Berntson (Eds.), Handbook of psychophysiology (4th ed., pp. 217–243). Cambridge University Press.
+
+- Benedek, M., & Kaernbach, C. (2010). A continuous measure of phasic electrodermal activity. Journal of Neuroscience Methods, 190(1), 80–91. https://doi.org/10.1016/j.jneumeth.2010.04.028
+
+- Posada-Quintero, H. F., & Chon, K. H. (2020). Innovations in electrodermal activity data collection and signal processing: A systematic review. Sensors, 20(2), 479. https://doi.org/10.3390/s20020479
+
+- International Electrotechnical Commission. (2018). IEC 60479-1: Effects of current on human beings and livestock – Part 1: General aspects. IEC.
+
+- Cacioppo, J. T., Tassinary, L. G., & Berntson, G. G. (2017). Handbook of psychophysiology (4th ed.). Cambridge University Press.
+
+- Critchley, H. D. (2002). Electrodermal responses: What happens in the brain. The Neuroscientist, 8(2), 132–142. https://doi.org/10.1177/107385840200800209
