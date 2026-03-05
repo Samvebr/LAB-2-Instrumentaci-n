@@ -15,13 +15,13 @@ La respuesta galvánica cutánea (GSR, Galvanic Skin Response) se compone de dos
 
 Esta señal ha sido ampliamente utilizada en estudios de psicofisiología para evaluar estrés, carga cognitiva y respuestas emocionales. Sin embargo, aunque es un buen indicador autonómico, presenta limitaciones y no puede considerarse un método diagnóstico por sí solo.
 
-##Objetivos
+## Objetivos
 
-#Objetivo General
+# Objetivo General
 
 Diseñar, construir y validar un sistema vestible capaz de estimar cuantitativamente el nivel de estrés en un individuo sano mediante la medición continua de la respuesta galvánica cutánea (GSR).
 
-#Objetivos Especificos
+# Objetivos Especificos
 
 -Identificar y diferenciar las componentes estacionaria (SCL) y transitoria (SCR) de la señal de respuesta galvánica cutánea.
 
