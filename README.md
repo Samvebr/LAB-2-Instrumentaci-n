@@ -227,6 +227,8 @@ Posteriormente el programa configura la comunicación serial con el dispositivo 
 
 ## Gráficas
 
+<img width="696" height="458" alt="image" src="https://github.com/user-attachments/assets/8fc7b1c3-19cf-4c10-b043-8bb65c613e22" />
+
 ## Analísis
 
 ## Conclusiones 
